@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RHPhotoBrowser"
-  s.version      = "1.0.0"
+  s.version      = "1.0.3"
   s.summary      = "RHPhotoBrowser 是一款简单的图片浏览器"
   s.homepage     = "https://github.com/guorenhao/RHPhotoBrowser"
   s.license      = "MIT"

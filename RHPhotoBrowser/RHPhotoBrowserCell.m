@@ -7,7 +7,7 @@
 //
 
 #import "RHPhotoBrowserCell.h"
-#import <SDWebImage/UIView+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import <RHProgressHUD/RHProgressHUD.h>
 
 @interface RHPhotoBrowserCell ()
