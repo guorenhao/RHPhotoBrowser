@@ -105,5 +105,101 @@ typedef NS_ENUM(NSUInteger, RHPhotoSourceType) {
  */
 + (void)browseImageWithStyle:(RHPhotoBrowserShowStyle)style sourceType:(RHPhotoSourceType)sourceType imageArr:(NSArray *)imageArr placeholderImage:(UIImage *)placeholderImage selectIndex:(NSInteger)selectIndex;
 
+/**
+ 快速浏览图片
+ 
+ @param sourceType       数组数据类型
+ @param imageArr         图片数据数组
+ @param delegate         代理对象
+ */
++ (void)browseImageWithSourceType:(RHPhotoSourceType)sourceType imageArr:(NSArray *)imageArr delegate:(id)delegate;
 
+/**
+ 快速浏览图片
+ 
+ @param sourceType       数组数据类型
+ @param imageArr         图片数据数组
+ @param selectIndex      当前选中下标
+ @param delegate         代理对象
+ */
++ (void)browseImageWithSourceType:(RHPhotoSourceType)sourceType imageArr:(NSArray *)imageArr selectIndex:(NSInteger)selectIndex delegate:(id)delegate;
+
+/**
+ 快速浏览图片
+ 
+ @param sourceType       数组数据类型
+ @param imageArr         图片数据数组
+ @param placeholderImage 占位图
+ @param delegate         代理对象
+ */
++ (void)browseImageWithSourceType:(RHPhotoSourceType)sourceType imageArr:(NSArray *)imageArr placeholderImage:(UIImage *)placeholderImage delegate:(id)delegate;
+
+/**
+ 快速浏览图片
+ 
+ @param sourceType       数组数据类型
+ @param imageArr         图片数据数组
+ @param placeholderImage 占位图
+ @param selectIndex      当前选中下标
+ @param delegate         代理对象
+ */
++ (void)browseImageWithSourceType:(RHPhotoSourceType)sourceType imageArr:(NSArray *)imageArr placeholderImage:(UIImage *)placeholderImage selectIndex:(NSInteger)selectIndex delegate:(id)delegate;
+
+/**
+ 快速浏览图片
+ 
+ @param style            浏览器弹出动画样式
+ @param sourceType       数组数据类型
+ @param imageArr         图片数据数组
+ @param delegate         代理对象
+ */
++ (void)browseImageWithStyle:(RHPhotoBrowserShowStyle)style sourceType:(RHPhotoSourceType)sourceType imageArr:(NSArray *)imageArr delegate:(id)delegate;
+
+/**
+ 快速浏览图片
+ 
+ @param style            浏览器弹出动画样式
+ @param sourceType       数组数据类型
+ @param imageArr         图片数据数组
+ @param placeholderImage 占位图
+ @param delegate         代理对象
+ */
++ (void)browseImageWithStyle:(RHPhotoBrowserShowStyle)style sourceType:(RHPhotoSourceType)sourceType imageArr:(NSArray *)imageArr placeholderImage:(UIImage *)placeholderImage delegate:(id)delegate;
+
+/**
+ 快速浏览图片
+ 
+ @param style            浏览器弹出动画样式
+ @param sourceType       数组数据类型
+ @param imageArr         图片数据数组
+ @param selectIndex      当前选中下标
+ @param delegate         代理对象
+ */
++ (void)browseImageWithStyle:(RHPhotoBrowserShowStyle)style sourceType:(RHPhotoSourceType)sourceType imageArr:(NSArray *)imageArr selectIndex:(NSInteger)selectIndex delegate:(id)delegate;
+
+/**
+ 快速浏览图片
+ 
+ @param style            浏览器弹出动画样式
+ @param sourceType       数组数据类型
+ @param imageArr         图片数据数组
+ @param placeholderImage 占位图
+ @param selectIndex      当前选中下标
+ @param delegate         代理对象
+ */
++ (void)browseImageWithStyle:(RHPhotoBrowserShowStyle)style sourceType:(RHPhotoSourceType)sourceType imageArr:(NSArray *)imageArr placeholderImage:(UIImage *)placeholderImage selectIndex:(NSInteger)selectIndex delegate:(id)delegate;
+
+
+@end
+@protocol RHPhotoBrowserDelegate <NSObject>
+
+@optional
+// 即将显示
+- (void)photoBrowserWillAppear;
+// 已经显示
+- (void)photoBrowserDidAppear;
+// 即将消失
+- (void)photoBrowserWillDisappear;
+// 已经消失
+- (void)photoBrowserDidDisappear;
 @end

@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#define RHScreen_Width       [UIScreen mainScreen].bounds.size.width
+#define RHScreen_Height      [UIScreen mainScreen].bounds.size.height
+#define RHScaleSize          RHScreen_Width / 375
+#define RHSS(a)              RHScaleSize * (a)
 
 @interface RHPhotoBrowserCell : UICollectionViewCell
 

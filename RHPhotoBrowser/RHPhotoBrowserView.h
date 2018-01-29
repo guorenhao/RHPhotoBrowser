@@ -11,6 +11,8 @@
 
 @interface RHPhotoBrowserView : UIView
 
+@property (nonatomic, weak) id<RHPhotoBrowserDelegate> delegate;
+
 - (instancetype)initWithStyle:(RHPhotoBrowserShowStyle)style sourceType:(RHPhotoSourceType)sourceType imageArr:(NSArray *)imageArr placeholderImage:(UIImage *)placeholderImage selectIndex:(NSInteger)selectIndex;
 
 - (void)show;
